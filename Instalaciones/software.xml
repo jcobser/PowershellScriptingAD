@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configuracion>
+    <env>
+        <!-- Servidor que guarda el recurso compartido -->
+		<srv>SRVEEAECDW03</srv> 
+		<!-- Recurso compartido -->
+        <shared>APP$</shared> 
+		<!-- Path dentro de la máquina donde se guardará la instalación -->
+        <PathLocal>C:\Program Files\Software_eeae\Install</PathLocal>
+    </env>
+    <Aplis>
+        <Software Nombre ="VLC" descripcion= "Software visor de videos" carpeta = "VLC">
+	<!-- IsInLocalPath = "1" Si el comando que se ejecuta está en la carpeta de 
+		instalación del software
+		IsInLocalPath = "0" Si el comando que se ejecuta es un comando del sistema
+	-->
+        <Ejecutable IsInLocalPath = "1" comando = "vlc-2.2.4-win64.exe" argumento = "/L=1034 /S" />
+	<!-- Verificado: Sólo a efectos de control para comprobar que ya se ha instalado 
+					alguna vez desde este fichero
+	-->
+	<verificado />
+        </Software>
+        <Software Nombre ="OFFICE2013" descripcion= "Paquete Ofimático Microsoft Office ProPlus 2013" carpeta = "OFFICE2013">
+            <Ejecutable IsInLocalPath = "1" comando = "setup.exe" argumento = "/Config ConfigProPlusEEAE.xml" />
+			<verificado />
+        </Software>
+        <Software Nombre ="VISIO2013" descripcion= "Microsoft Visio 2013" carpeta = "OFFICE2013">
+            <Ejecutable IsInLocalPath = "1" comando = "setup.exe" argumento = "/Config ConfigVisProEEAE.xml" />
+			<verificado />
+        </Software>
+        <Software Nombre ="PROJECT2013" descripcion= "Microsoft Proyect 2013" carpeta = "OFFICE2013">
+            <Ejecutable IsInLocalPath = "1" comando = "setup.exe" argumento = "/Config ConfigPrjProEEAE.xml" />
+			<verificado />
+        </Software>
+		
+		<Software Nombre ="CiscoPT53" descripcion= "Simulador para clases de Routing y Switching 5.3" carpeta = "CiscoPacketTracert">
+        	<Ejecutable IsInLocalPath = "1" comando = "CiscoPT53.exe" argumento = "/verysilent" />
+			
+		<verificado />
+        </Software>
+		
+        <Software Nombre ="CiscoPT62" descripcion= "Simulador para clases de Routing y Switching 6.2" carpeta = "CiscoPacketTracert">
+        	<Ejecutable IsInLocalPath = "0" comando = "c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" 
+				argumento ='-ExecutionPolicy Bypass -File "C:\Program Files\Software_eeae\Install\CiscoPacketTracert\CiscoPT62.ps1"'/>
+		<verificado />
+        </Software>
+
+		<Software Nombre ="CiscoPT71" descripcion= "Simulador para clases de Routing y Switching 7.1" carpeta = "CiscoPacketTracert">
+        	<Ejecutable IsInLocalPath = "0" comando = "c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" 
+				argumento ='-ExecutionPolicy Bypass -File "C:\Program Files\Software_eeae\Install\CiscoPacketTracert\CiscoPT71.cmd"'/>
+			<!--<Ejecutable IsInLocalPath = "1" comando = "CiscoPT71.cmd" argumento = '/verysilent /Dir="C:\Program Files\CiscoPT71\" /Supressmsgboxes /NORESTART /SP-' />-->
+		<verificado />
+        </Software>
+		<Software Nombre ="CiscoPT722" descripcion= "Simulador para clases de Routing y Switching 7.2.2" carpeta = "CiscoPacketTracert">
+        	<Ejecutable IsInLocalPath = "0" comando = "c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" 
+				argumento ='-ExecutionPolicy Bypass -File "C:\Program Files\Software_eeae\Install\CiscoPacketTracert\CiscoPT722.ps1"'/>
+		<verificado />
+        </Software>
+	<Software Nombre ="NetBeans" descripcion= "Plataforma de desarrollo Java" carpeta = "NetBeans">
+		
+		<Ejecutable IsInLocalPath = "1" comando = "NetBeans-8.3.exe" argumento = "--silent" /> 
+		<verificado />
+        </Software>
+	<Software Nombre ="VirtualBox" descripcion= "Software de virtualización" carpeta = "VirtualBox">
+		<Ejecutable IsInLocalPath = "0" comando = "C:\windows\regedit.exe" 
+			argumento ='/s "c:\Program Files\software_eeae\Install\VirtualBox\regVirtualBox5.2.0.reg"' />
+		<Ejecutable IsInLocalPath = "1" comando = "VirtualBox.msi" argumento = "/quiet" />
+		<verificado />
+	</Software>
+		<Software Nombre ="Brackets" descripcion= "Editor de textos avanzado para HTML" carpeta = "Brackets">
+				<Ejecutable IsInLocalPath = "1" comando = "Brackets.Release.1.11.msi" argumento = "/quiet" />
+		<verificado />
+	</Software>
+	<Software Nombre ="StarBoard" descripcion= "Software de Pizarra Electronica de Multimedia4. REINICIA LA MAQUINA AL FINALIZAR!!" carpeta = "StarBoard">
+		<Ejecutable IsInLocalPath = "1" comando = "Win\StarBoardSoftware\msi\StarBoard Software.msi" argumento = "ACCEPT=yes /qn /norestart" />
+		<Ejecutable IsInLocalPath = "1" comando = "Win\StarBoardSoftware\msi\StarBoard Contents.msi" argumento = "ACCEPT=yes /qn /norestart" />
+		<Ejecutable IsInLocalPath = "1" comando = "Win\StarBoardSoftware\msi\64bit\StarBoard Document Capture.msi" argumento = "ACCEPT=yes /qn /norestart" />
+		<Ejecutable IsInLocalPath = "1" comando = "Win\StarBoardSoftware\msi\StarBoard Driver.msi" argumento = "ACCEPT=yes /qn /norestart" />
+		<verificado />
+	</Software>
+	<Software Nombre ="VISUALSTUDIO" descripcion= "Plataforma de desarrollo MS .Net" carpeta = "VS2015">
+		<Ejecutable IsInLocalPath = "1" comando = "vs_enterprise.exe" argumento = "/Full /NoWeb /Silent /NoRefresh /NoRestart /Passive" />
+        </Software>
+	<Software Nombre ="Eclipse" descripcion= "Plataforma de desarrollo Java" carpeta = "Eclipse">
+		<Ejecutable IsInLocalPath = "1" comando = "JDK-SE\jdk-8u151-windows-x64.exe"  argumento = "/s" />
+		<!-- Este software no tiene instalación. Sólo es necesario copiarlo en el disco duro local -->
+		<verificado />
+	</Software>
+	<Software Nombre ="JDKSE" descripcion= "JDK de Java. Edición SE" carpeta = "JDK-SE">
+		<Ejecutable IsInLocalPath = "1" comando = "jdkx86.exe"  argumento = "/s" />
+		<verificado />
+	</Software>
+	<Software Nombre ="JDKSEx64" descripcion= "JDK de Java. Edición SE x64" carpeta = "JDK-SE">
+		<Ejecutable IsInLocalPath = "1" comando = "jdk8u191x64.exe"  argumento = " /s" />
+		<verificado />
+	</Software>
+	<Software Nombre ="JRE8u221x64" descripcion= "Java Runtime environment 8u221" carpeta = "JRE8u221">
+		<Ejecutable IsInLocalPath = "1" comando = "jre-8u221-windows-i586.exe"  argumento = " /s" />
+		<verificado />
+	</Software>
+	<Software Nombre ="SQLExpress2017" descripcion= "Base de Datos SQL Express 2017" carpeta = "SQLXPRSS2017">
+		<!-- Este software no tiene instalación. Sólo es necesario copiarlo en el disco duro local -->
+		<verificado />
+	</Software>
+		<Software Nombre ="IDEsJava" descripcion= "Base de Datos SQL Express 2017" carpeta = "IDEsJava">
+		<!-- Este software no tiene instalación. Sólo es necesario copiarlo en el disco duro local -->
+		<verificado />
+	</Software>
+	<Software Nombre ="SQL-SSMS" descripcion= "SQL Management" carpeta = "SQL-SSMS">
+		<Ejecutable IsInLocalPath = "1" comando = "SSMS-Setup-ESN.exe"  argumento = " /s" />
+		<verificado />
+	</Software>
+	<Software Nombre ="IIS" descripcion= "Activacion de IIS sobre W10 para desarrollo ASP" carpeta = "IIS-Install">
+		<Ejecutable IsInLocalPath = "0" comando = "c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" 
+			argumento ='-ExecutionPolicy Bypass -File "C:\Program Files\Software_eeae\Install\IIS-Install\InstalIIS-ASP.ps1"'/>
+		<verificado />
+	</Software>
+		<Software Nombre ="SQL-Firewall" descripcion= "Activacion Reglas Firewall SQL(tcp/udp)" carpeta = "SQL-Firewall">
+		<Ejecutable IsInLocalPath = "0" comando = "c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" 
+			argumento ='-ExecutionPolicy Bypass -File "C:\Program Files\Software_eeae\Install\SQL-Firewall\SQL-Firewall.ps1"'/>
+		<verificado />
+	</Software>
+		<Software Nombre ="AREPS" descripcion= "Software de predicción de alcance para clases de comunicaciones" carpeta = "AREPS3.3">
+		<!-- Este software no tiene instalación. Sólo es necesario copiarlo en el disco duro local -->
+		<verificado />
+	</Software>
+	<Software Nombre ="NATURAL" descripcion= "Software para clases de programación en Natural/Velneo" carpeta = "NATURAL_8.3">
+		<!-- Este software no tiene instalación. Sólo es necesario copiarlo en el disco duro local -->
+		<verificado />
+	</Software>
+	<Software Nombre ="LibreOffice" descripcion= "Software LibreOffice " carpeta = "LibreOffice">
+		<!--<Ejecutable IsInLocalPath = "0" comando = "c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" 
+			argumento ='-ExecutionPolicy Bypass -File "C:\Program Files\Software_eeae\Install\LibreOffice\LibreOff.ps1 -instalar"'/>
+		<verificado /> -->
+		<Ejecutable IsInLocalPath = "1" comando = "LibreOffice6.2.2.msi" argumento = "/quiet" />
+		<verificado />
+	</Software>
+	<Software Nombre ="DNIe" descripcion= "DNIe" carpeta = "DNIe">
+		<Ejecutable IsInLocalPath = "1" comando = "DNIe_v14_0_2(64bits).msi" argumento = "/quiet" />
+		<verificado />
+	</Software>
+		<Software Nombre ="Notepad++" descripcion= "Editor de textos avanzado" carpeta = "Notepad++">
+			<Ejecutable IsInLocalPath = "1" comando = "npp.7.9.Installer.x64.exe" 
+			argumento ='/S'/>
+			</Software>
+	<Software Nombre ="VeyonCisco" descripcion= "Veyon-CiscoAlumnos" carpeta = "Veyon">
+			<Ejecutable IsInLocalPath = "1" comando = "veyon-4.4.1.0-win64-setup.exe" 
+			argumento ='/S /NoMaster /NoInterception /ApplyConfig=.\AulaCisco\Configuracion-AulaCisco-Cliente.json'/>
+		<verificado />
+	</Software>
+    </Aplis>
+</Configuracion>
