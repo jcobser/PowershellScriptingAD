@@ -1,4 +1,4 @@
-    [string] $NetBiosCmp = "ZFNCNTS0001"
+    [string] $NetBiosCmp = "ZCNTS0001"
     [string] $Ip         = "172.16.0.5"
     [string] $DefaultGw  = "172.16.0.1"
     [string] $DNS        = "172.16.0.254"

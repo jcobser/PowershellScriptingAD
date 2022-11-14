@@ -62,4 +62,4 @@ Add-WindowsFeature AD-Domain-Services -IncludeManagementTools
 
 #Guardado del siguiente paso
 
-#New-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce' -Name "CDW01-Paso2" `#    -Value "PowerShell.exe -ExecutionPolicy Bypass -Noexit -File C:\users\Administrador\Documents\Scripts\PromocionCDW02.ps1 -Puesto $Puesto"    echo Reinicie el servidor.....
+New-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce' -Name "CDW01-Paso2" `    -Value "PowerShell.exe -ExecutionPolicy Bypass -Noexit -File C:\users\Administrador\Documents\Scripts\PromocionCDW02.ps1 -Puesto $Puesto"    echo Reinicie el servidor.....

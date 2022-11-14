@@ -4,7 +4,7 @@
 ####
 ####
 #### Configuración de Cuotas según
-#### normativa de CCEA
+#### normativa de 
 ####
 #### 
 ####

@@ -4,7 +4,7 @@
 ####
 ####
 #### Configuración de un servidor de ficheros según
-#### normativa de CCEA
+#### normativa de 
 ####
 #### 
 ####
