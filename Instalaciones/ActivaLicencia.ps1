@@ -2,7 +2,7 @@
         [Parameter (Mandatory = $true)][String]$License
       ) 
 
-Invoke-Command -ComputerName zfneeae0200 -ArgumentList "$License" {
-    cscript.exe c:\windows\system32\slmgr.vbs /ipk $args[0]
+Invoke-Command -ComputerName $ComputerName -ArgumentList "$License" {
+    cscript.exe c:\windows\system32\slmgr.vbs /ipk $License
     cscript.exe c:\windows\system32\slmgr.vbs /ato
 }
